@@ -1,42 +1,42 @@
-var length = 0.45675;
-var width = 1;
-var lengthComparative = length;
+var height = 5.379;
+var width = 10;
+var heightComparative = height;
 var widthComparative = width;
-var area = 234;
-var ratio = (Math.max(length, width)) / (Math.min(length, width));
+var area = 10000;
+var ratio = (Math.max(height, width)) / (Math.min(height, width));
 
 
 //GET MAX VALUES
 
 
-while ((length * width) < area) {
-	var b = (Math.max(length, width));
-	var c = (Math.min(length, width));
+while ((height * width) < area) {
+	var b = (Math.max(height, width));
+	var c = (Math.min(height, width));
 	b+=0.1;
 	b = b.toFixed(1)
 	c = c + (0.1 / ratio);
-	length = (Math.max(b, c));
+	height = (Math.max(b, c));
 	width = (Math.min(b, c));
 }
 
-length-=0.1;
-length = length.toFixed(1);
+height-=0.1;
+height = height.toFixed(1);
 width = width - (0.1 / ratio);
 width = width.toFixed(2);
 
-if (lengthComparative > widthComparative ){
-	b = (Math.max(length, width));
-	c = (Math.min(length, width));
-	length = b;
+if (heightComparative > widthComparative ){
+	b = (Math.max(height, width));
+	c = (Math.min(height, width));
+	height = b;
 	width = c;
-} else if (lengthComparative < widthComparative){
-	b = (Math.max(length, width));
-	c = (Math.min(length, width));
-	length = c;
+} else if (heightComparative < widthComparative){
+	b = (Math.max(height, width));
+	c = (Math.min(height, width));
+	height = c;
 	width = b;
 }
 
 
 
 
-console.log("If the area is " + area + " The length is " + length + " and the width is " + width + ".");
+console.log("If the area is " + area + " The height is " + height + " and the width is " + width + ".");
